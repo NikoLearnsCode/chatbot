@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  overscroll-behavior-y: none;
+  overflow-x: hidden;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float-manual {
+  animation: float 2s infinite ease-in-out;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3c3c3c;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #565656;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; 
+}
